@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hhP-hi-JfS">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View-->
+        <scene sceneID="vaj-tv-Yfv">
+            <objects>
+                <viewController storyboardIdentifier="SearchView" id="hhP-hi-JfS" customClass="SearchView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HaF-73-5SK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wwm-OV-EMe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mxh-Du-VSW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="2799">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="500">
+                                <rect key="frame" x="12" y="135" width="351" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="3771"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1863">
+                                <rect key="frame" x="12" y="96" width="351" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" searchField="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3770"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2094">
+                                <rect key="frame" x="0.0" y="6" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Open Weather" id="2095"/>
+                                </items>
+                            </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2327">
+                                <rect key="frame" x="170" y="387.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2562" misplaced="YES">
+                                <rect key="frame" x="12" y="172" width="351" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="2799" secondAttribute="leading" constant="20" id="2800"/>
+                            <constraint firstItem="2799" firstAttribute="trailing" secondItem="Mxh-Du-VSW" secondAttribute="trailingMargin" constant="20" id="2801"/>
+                            <constraint firstItem="2799" firstAttribute="centerY" secondItem="Mxh-Du-VSW" secondAttribute="centerY" id="2802"/>
+                            <constraint firstItem="2799" firstAttribute="centerX" secondItem="Mxh-Du-VSW" secondAttribute="centerX" id="2803"/>
+                            <constraint firstItem="2799" firstAttribute="bottom" secondItem="Mxh-Du-VSW" secondAttribute="bottom" id="2804"/>
+                            <constraint firstItem="2327" firstAttribute="centerY" secondItem="2799" secondAttribute="centerY" id="3447"/>
+                            <constraint firstItem="2327" firstAttribute="centerX" secondItem="2799" secondAttribute="centerX" constant="1" id="3448"/>
+                            <constraint firstItem="500" firstAttribute="centerX" secondItem="2799" secondAttribute="centerX" id="3763"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="500" secondAttribute="leading" constant="4" id="3764"/>
+                            <constraint firstItem="500" firstAttribute="trailing" secondItem="Mxh-Du-VSW" secondAttribute="trailingMargin" constant="4" id="3765"/>
+                            <constraint firstItem="1863" firstAttribute="centerX" secondItem="2799" secondAttribute="centerX" id="3767"/>
+                            <constraint firstItem="1863" firstAttribute="trailing" secondItem="Mxh-Du-VSW" secondAttribute="trailingMargin" constant="4" id="3769"/>
+                            <constraint firstItem="1863" firstAttribute="top" secondItem="HaF-73-5SK" secondAttribute="bottom" constant="76" id="4067"/>
+                            <constraint firstItem="500" firstAttribute="top" secondItem="HaF-73-5SK" secondAttribute="bottom" constant="115" id="4068"/>
+                            <constraint id="4372" firstItem="2562" firstAttribute="leading" secondItem="500" secondAttribute="leading"/>
+                            <constraint id="4373" firstItem="2562" firstAttribute="height" secondItem="500" secondAttribute="height"/>
+                            <constraint id="4374" firstItem="2562" firstAttribute="trailing" secondItem="500" secondAttribute="trailing"/>
+                            <constraint id="4375" firstItem="2562" firstAttribute="top" secondItem="500" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addFavouriteButton" destination="2562" id="name-outlet-2562"/>
+                        <outlet property="loadingIndicator" destination="2327" id="name-outlet-2327"/>
+                        <outlet property="searchButton" destination="500" id="name-outlet-500"/>
+                        <outlet property="searchTextField" destination="1863" id="name-outlet-1863"/>
+                        <outlet property="backgroundImage" destination="2799" id="name-outlet-2799"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYG-jL-vDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clouds" width="213.3333" height="285.3333"/>
+    </resources>
+</document>

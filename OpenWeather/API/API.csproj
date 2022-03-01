@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\ProductionConfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConfigurationBuilder.Json" Version="1.0.0" />
+    <PackageReference Include="OpenWeatherMap.Net" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

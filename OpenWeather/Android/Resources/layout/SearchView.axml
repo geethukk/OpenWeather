@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/clouds"
+    android:scaleType="centerCrop"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+>
+    <EditText
+        android:paddingTop="40dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:id="@+id/searchEditText"
+        local:MvxBind="Text CityName"
+        local:layout_constraintLeft_toLeftOf="parent"
+        local:layout_constraintTop_toTopOf="parent"
+  />
+    <Button
+        android:background="@drawable/button_states"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/searchButton"
+        local:MvxBind="Click CheckWeatherCommand; Visibility InvertedVisibility(IsLoading)"
+        local:layout_constraintLeft_toLeftOf="@+id/searchEditText"
+        local:layout_constraintTop_toBottomOf="@+id/searchEditText"
+  />
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchActivityIndicator"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:keepScreenOn="true"
+        local:MvxBind="Visibility Visibility(IsLoading)"
+        local:layout_constraintLeft_toLeftOf="@+id/searchButton"
+        local:layout_constraintTop_toBottomOf="@+id/searchButton"
+  />
+    <Button
+        android:background="@drawable/button_states"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addFavouriteButton"
+        local:MvxBind="Click GetLocationCityNameCommand; Visibility InvertedVisibility(IsLoading)"
+        local:layout_constraintLeft_toLeftOf="@+id/searchButton"
+        local:layout_constraintTop_toBottomOf="@+id/searchButton"
+  />
+</android.support.constraint.ConstraintLayout>
